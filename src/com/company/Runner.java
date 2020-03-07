@@ -2,8 +2,7 @@ package com.company;
 
 public class Runner extends Thread {
 
-    private int nameNumPlus = 1;
-    private int nameNumMinus = 6;
+    private int nameNumPlus;
 
     public Runner(String name) {
         super(name);
@@ -17,24 +16,18 @@ public class Runner extends Thread {
         this.nameNumPlus = nameNumPlus;
     }
 
-    public int getNameNumMinus() {
-        return nameNumMinus;
-    }
-
-    public void setNameNumMinus(int nameNumMinus) {
-        this.nameNumMinus = nameNumMinus;
-    }
-
     synchronized public void run() {
+        
+            System.out.println(this.getName() + " берет палочку");
 
-        System.out.println(this.getName() + " берет палочку");
         try {
-            /*if (getPriority() < 5)
-                System.out.println(this.getName() + " бежит к " + (nameNum + 1));*/
-            if (getPriority() == 5)
-                System.out.println(getName() + " бежит к финишу");
 
-        } catch (Exception e) {
-        }
+            if (getPriority() >= 5 ) {
+                System.out.println(getName() + " бежит к финишу");
+            } else {
+                System.out.println(getName() + " бежит к " + "Бегун " + (getNameNumPlus()));
+            }
+
+        } catch (Exception e) { }
     }
 }
