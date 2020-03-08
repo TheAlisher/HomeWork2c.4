@@ -24,10 +24,11 @@ public class Runner extends Thread {
 
             if (getPriority() >= 5 ) {
                 System.out.println(getName() + " бежит к финишу");
+                System.out.println(getName() + " бежит к " + "Бегун " + (getNameNumPlus()));
             } else {
                 System.out.println(getName() + " бежит к " + "Бегун " + (getNameNumPlus()));
-                if (getPriority() == 5)
-                    System.out.println(getName() + " бежит к " + "Бегун " + getNameNumPlus());
+                /*if (getPriority() == 5)
+                    System.out.println(getName() + " бежит к " + "Бегун " + getNameNumPlus());*/
             }
 
         } catch (Exception e) { }

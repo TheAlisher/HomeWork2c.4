@@ -24,7 +24,7 @@ public class Main {
                 runner.start();
                 System.out.println("___");
                 runner.join();
-                
+
             }
         } catch (Exception e) { }
     }
