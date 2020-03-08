@@ -16,7 +16,7 @@ public class Main {
                 runner.join();
 
             }
-            for (int j = 5; j > 1; j--) {
+            for (int j = 5; j > 0; j--) {
                 Runner runner = new Runner("Бегун " + j);
 
                 runner.setNameNumPlus(j - 1);

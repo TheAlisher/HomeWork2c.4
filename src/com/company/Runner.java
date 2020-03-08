@@ -18,19 +18,19 @@ public class Runner extends Thread {
 
     synchronized public void run() {
 
-            System.out.println(this.getName() + " берет палочку");
+        System.out.println(this.getName() + " берет палочку");
 
         try {
 
-            if (getPriority() >= 5 ) {
+            if (getPriority() >= 5) {
                 System.out.println(getName() + " бежит к финишу");
                 System.out.println(getName() + " бежит к " + "Бегун " + (getNameNumPlus()));
-            } else {
+            } else if(getNameNumPlus() > 0) {
                 System.out.println(getName() + " бежит к " + "Бегун " + (getNameNumPlus()));
-                /*if (getPriority() == 5)
-                    System.out.println(getName() + " бежит к " + "Бегун " + getNameNumPlus());*/
             }
 
-        } catch (Exception e) { }
+        } catch (Exception e) {
+
+        }
     }
 }
