@@ -24,8 +24,7 @@ public class Main {
                 runner.start();
                 System.out.println("___");
                 runner.join();
-                if (runner.getPriority() == 5)
-                    System.out.println(runner.getName() + " бежит к " + "Бегун " + runner.getNameNumPlus());
+                
             }
         } catch (Exception e) { }
     }
